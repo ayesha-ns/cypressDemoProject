@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Cypress results and screenshots
+cypress/screenshots/
+cypress/videos/
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Other generated files
+dist/
+build/
+
