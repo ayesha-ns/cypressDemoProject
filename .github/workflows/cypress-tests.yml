@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./cypressDemoProject/CypressProjects
+        working-directory: ./CypressProjects
 
     steps:
       - name: Checkout code
