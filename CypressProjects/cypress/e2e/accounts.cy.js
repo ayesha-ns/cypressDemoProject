@@ -66,7 +66,7 @@ describe('Login', () => {
       cy.get("#loginusername").type(credentialsData.correctUserName)
       cy.get('#loginpassword').type(credentialsData.correctPassword)
       cy.get('button[onclick="logIn()"]').click()
-      cy.wait(2000)
+      cy.wait(4000)
       cy.get('#nameofuser').contains('Welcome ' + credentialsData.correctUserName)
     })
   })
