@@ -23,6 +23,16 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Cache Cypress binary
         uses: actions/cache@v3
         with:
@@ -33,6 +43,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install Cypress binary
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npx cypress run
