@@ -1,12 +1,4 @@
-const faker = require('faker')
 describe('Item purchase flow', () => {
-
-  before(() => {
-    cy.readFile('cypress/fixtures/testData.json').then((updateUserName) => {
-      updateUserName.correctUserName = faker.internet.userName()
-      cy.writeFile('cypress/fixtures/testData.json', updateUserName)
-    })
-  })
   
   beforeEach(() => {
     cy.fixture('testData').then((credentialsData) => {
